@@ -1,0 +1,44 @@
+@import "fonts";
+@import "variables";
+@import "tools";
+
+html, body {
+    font-family: Poppins;
+    font-weight: 100;
+    font-size: $BASE_FONT_SIZE;
+}
+
+.text-light {
+    color: $TEXT_LIGHT;
+}
+
+.script-font {
+    font-family: LeagueScript;
+    font-weight: 200;
+    font-size: $BASE_FONT_SIZE;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: $BASE_FONT_SIZE * 3.5;
+}
+
+h2 {
+    @extend .script-font;
+    font-size: $BASE_FONT_SIZE * 2;
+}
+
+.btn {
+    font-size: $BUTTON_FONT_SIZE;
+}
+
+.page-jumbotron {
+    background-image: url('../assets/bg2.jpg');
+    background-repeat: no-repeat;
+}
+
+.shadow-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
