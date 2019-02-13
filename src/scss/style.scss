@@ -1,38 +1,17 @@
 @import "fonts";
 @import "variables";
 @import "tools";
-
-html, body {
-    font-family: Poppins;
-    font-weight: 100;
-    font-size: $BASE_FONT_SIZE;
-}
+@import "generic";
 
 .text-light {
     color: $TEXT_LIGHT;
-}
-
-.script-font {
-    font-family: LeagueScript;
-    font-weight: 200;
-    font-size: $BASE_FONT_SIZE;
-}
-
-h1 {
-    font-weight: 200;
-    font-size: $BASE_FONT_SIZE * 3.5;
-}
-
-h2 {
-    @extend .script-font;
-    font-size: $BASE_FONT_SIZE * 2;
 }
 
 .btn {
     font-size: $BUTTON_FONT_SIZE;
 }
 
-.page-jumbotron {
+.jumbotron-bg {
     background-image: url('../assets/bg2.jpg');
     background-repeat: no-repeat;
 }
@@ -41,4 +20,35 @@ h2 {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.bg-light {
+    background-color: $BACKGROUND_LIGHT;
+}
+
+.bg-dark {
+    background-color: $BACKGROUND_DARK !important;
+}
+
+@mixin triangle-up($color, $size: 44px) {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0 - $size;
+    left: 48%;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+}
+
+.triangle-up-light {
+    &:before {
+        @include triangle-up($BACKGROUND_LIGHT);
+    }
+}
+
+.triangle-up-dark {
+    &:before {
+        @include triangle-up($BACKGROUND_DARK);
+    }
+}
 
