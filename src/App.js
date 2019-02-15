@@ -1,6 +1,6 @@
 import React from 'react';
 import {PageJumbotron} from './components/Jumbotron';
-import {NameGeneratorPage} from './pages/NameGeneratorPage';
+import NameGeneratorPage from './pages/NameGeneratorPage';
 
 const App = () => <div>
     <header>
