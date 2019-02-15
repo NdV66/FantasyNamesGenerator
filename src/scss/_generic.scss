@@ -22,3 +22,8 @@ h2 {
     @extend .script-font;
     font-size: $BASE_FONT_SIZE * 2;
 }
+
+h3 {
+    font-weight: 100;
+    font-size: $BASE_FONT_SIZE * 1.6;
+}

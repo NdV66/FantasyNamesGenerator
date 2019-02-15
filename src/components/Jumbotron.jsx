@@ -1,27 +1,12 @@
 import React from 'react';
 import { Jumbotron } from 'reactstrap';
-import {PropTypes} from 'prop-types';
+import { Circle } from './Circle';
 
 const CIRCLE_NUMBER = 40;
 const MAX_CIRCLE_SIZE = 16;
 const MIN_CIRCLE_SIZE = 4;
 
 const randomIntegerBetween = (min, max) => Math.floor(Math.random() * max) + min;
-
-const Circle = (props) => <circle
-        cx={props.cx}
-        cy={props.cy}
-        r={props.r}
-        fill={props.fill}
-        className='fantasy-snow'
-    />;
-
-Circle.propTypes = {
-    r: PropTypes.string,
-    fill: PropTypes.string,
-    cx: PropTypes.string,
-    cy: PropTypes.string,
-};
 
 const renderCircles = ({circlesNumber, maxY, maxX,}) => {
     const renderedCircles = [];
@@ -65,7 +50,7 @@ export class PageJumbotron extends React.Component {
             maxY: this.state.jumbotronHeight,
         };
 
-        return <div className='jumbotron-bg position-relative' ref={this.jumbotronRef}>
+        return <div className='jumbotron-bg position-relative wavy-div' ref={this.jumbotronRef}>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className='jumbotron-svg'>
                 {renderCircles(circlesSettings)}
             </svg>
