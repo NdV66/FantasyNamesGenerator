@@ -1,8 +1,11 @@
-import Actions from './actionNames.json';
+import Actions from '../actionNames.json';
 
-export const mainReducer = (state, action) => {
+const initialState = { generatedName: 'Test' }
+
+export const getNameReducer = (state = initialState, action) => {
     switch (action.type) {
         case Actions.ON_CLICK_GET_NAME:
+        console.log('on click get name buttonik');
             return {
                 ...state,
                 generatedName: 'Tosia',

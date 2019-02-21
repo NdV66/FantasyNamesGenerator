@@ -1,6 +1,7 @@
 import React from 'react';
 import {PageJumbotron} from './components/Jumbotron';
 import NameGeneratorPage from './pages/NameGeneratorPage';
+import {FooterPage} from './pages/FooterPage';
 
 const App = () => <div>
     <header>
@@ -10,7 +11,7 @@ const App = () => <div>
         <NameGeneratorPage />
     </main>
     <footer>
-
+        <FooterPage />
     </footer>
 </div>;
 

@@ -3,6 +3,7 @@
 @import "tools";
 @import "generic";
 @import "animations";
+@import "footer";
 
 .text-light {
     color: $TEXT_LIGHT;
@@ -74,4 +75,17 @@
     height: $height;
     background-size: $height * 2;
     background-image: radial-gradient(circle at $height (0 - $height/2), transparent $height * 1.2, $BACKGROUND_DARK $height / 0.77);
+}
+
+a {
+    &:hover,
+    &:active,
+    &:visited,
+    &:link {
+        color: $TEXT_LIGHT;
+    }
+}
+
+.jumbotron {
+    min-height: 33vh;
 }

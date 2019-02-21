@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
-import { mainReducer }from './reducers';
+import { mainReducer }from './reducers/mainReducer';
 import App from './App';
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGrinBeam, faCodeBranch, faCampground} from '@fortawesome/free-solid-svg-icons'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/style.scss';
 
-const store = createStore(mainReducer, { generatedName: 'Test' });
+const store = createStore(mainReducer);
+
+library.add(faGrinBeam, faCodeBranch, faCampground);
 
 ReactDOM.render( <Provider store={store}><App /></Provider>, document.getElementById('root'));
 

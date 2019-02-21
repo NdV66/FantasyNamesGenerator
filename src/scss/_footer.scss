@@ -1,0 +1,16 @@
+h5 {
+    font-size: $BASE_FONT_SIZE * 0.94;
+    text-align: center;
+    font-weight: 200;
+}
+
+.footer {
+    background-color: $PENCIL_LEAD;
+    color: $TEXT_LIGHT;
+    font-size: $BASE_FONT_SIZE * 0.8 !important;
+    font-weight: 100 !important;
+}
+
+.fa-footer {
+    font-size: $BASE_FONT_SIZE * 1.4;
+}
