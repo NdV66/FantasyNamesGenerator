@@ -1,0 +1,15 @@
+{
+    "ABOUT": "About",
+    "ABOUT_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam.",
+    "ABOUT_LINK": "See my site",
+    "ABOUT_URL": "#",
+    "MY_GITHUB": "My Github",
+    "MY_GITHUB_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam.",
+    "MY_GITHUB_LINK": "See my Github",
+    "MY_GITUB_URL": "https://github.com/NdV66",
+    "OTHER_PROJECTS": "Other project",
+    "OTHER_PROJECT_LINK_1": "BB code parser online",
+    "OTHER_PROJECT_URL_1": "https://ndv66.github.io/beStarOnline/#/",
+    "OTHER_PROJECT_LINK_2": "Funny git names generator",
+    "OTHER_PROJECT_URL_2": "https://ndv66.github.io/beStarOnline/#/"
+}

@@ -2,6 +2,9 @@ import React from 'react';
 import {Col, Row, Container} from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {PropTypes} from 'prop-types';
+import LANG from '../assets/en.json';
+
+const URL_CONTAINER_CSS_CLASSES = 'mt-2 font-weight-normal';
 
 const FontAwesomeIconWrapper = (props) => <FontAwesomeIcon icon={props.icon} className='fa-footer mb-2' />;
 
@@ -29,8 +32,8 @@ FooterElementContainer.propTypes = {
 
 const TextFooterElementBody = (props) => <div className='text-justify'>
     {props.text}
-    <div className='mt-2 font-weight-normal'>
-        <a href={props.href}>{props.linkName}</a>
+    <div className={URL_CONTAINER_CSS_CLASSES}>
+        <a target='_blank' rel='noopener noreferrer' href={props.href}>{props.linkName}</a>
     </div>
 </div>;
 
@@ -41,34 +44,39 @@ TextFooterElementBody.propTypes = {
 };
 
 const aboutBody = <TextFooterElementBody
-    href='#'
-    linkName='See my site'
-    text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam.'
+    href={LANG.ABOUT_URL}
+    linkName={LANG.ABOUT_LINK}
+    text={LANG.ABOUT_TEXT}
 />;
 
 const myGithubBody = <TextFooterElementBody
-    href='https://github.com/NdV66'
-    linkName='See my Github'
-    text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam.'
+    href={LANG.MY_GITUB_URL}
+    linkName={LANG.MY_GITHUB_LINK}
+    text={LANG.MY_GITHUB_TEXT}
 />;
+
+const otherProjectBodyHrefCssClasses = 'd-block';
+const otherProjectBody = <div className={URL_CONTAINER_CSS_CLASSES}>
+    <a target='_blank' rel='noopener noreferrer' href={LANG.OTHER_PROJECT_URL_1} className={otherProjectBodyHrefCssClasses}>{LANG.OTHER_PROJECT_LINK_1}</a>
+    <a target='_blank' rel='noopener noreferrer' href={LANG.OTHER_PROJECT_URL_2} className={otherProjectBodyHrefCssClasses}>{LANG.OTHER_PROJECT_LINK_2}</a>
+</div>;
 
 export const FooterPage = () => <Container fluid>
     <Row className='footer pt-3 pb-2 font-weight-normal'>
         <FooterElementContainer
             icon='grin-beam'
-            header='About'
+            header={LANG.ABOUT}
             body={aboutBody}
         />
         <FooterElementContainer
             icon='code-branch'
-            header='My Github'
+            header={LANG.MY_GITHUB}
             body={myGithubBody}
         />
         <FooterElementContainer
             icon='campground'
-            header='Other projects'
+            header={LANG.OTHER_PROJECTS}
+            body={otherProjectBody}
         />
     </Row>
 </Container>;

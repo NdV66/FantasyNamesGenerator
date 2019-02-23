@@ -3,6 +3,7 @@
 @import "tools";
 @import "generic";
 @import "animations";
+@import "jumbotron";
 @import "footer";
 
 .text-light {
@@ -11,15 +12,6 @@
 
 .btn {
     font-size: $BUTTON_FONT_SIZE;
-}
-
-.jumbotron-bg {
-    background-image: url('../assets/bg2.jpg');
-    background-repeat: no-repeat;
-}
-
-.shadow-bg {
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .bg-light {
@@ -52,29 +44,6 @@
     &:before {
         @include triangle-up($BACKGROUND_DARK);
     }
-}
-
-.jumbotron-svg {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.wavy-div{
-    position: relative;
-}
-
-.wavy-div::before{
-    $height: 16px;
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-repeat: repeat;
-    height: $height;
-    background-size: $height * 2;
-    background-image: radial-gradient(circle at $height (0 - $height/2), transparent $height * 1.2, $BACKGROUND_DARK $height / 0.77);
 }
 
 a {

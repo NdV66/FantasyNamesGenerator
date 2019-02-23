@@ -51,7 +51,7 @@ export class PageJumbotron extends React.Component {
         };
 
         return <div className='jumbotron-bg position-relative wavy-div' ref={this.jumbotronRef}>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className='jumbotron-svg'>
+            <svg xmlns='http://www.w3.org/2000/svg' version='1.1' className='jumbotron-svg'>
                 {renderCircles(circlesSettings)}
             </svg>
             <Jumbotron className='page-jumbotron text-center text-light shadow-bg mb-0'>

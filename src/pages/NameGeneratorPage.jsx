@@ -14,10 +14,9 @@ const mapDispatchToProps = (dispatch) => ({
 
 class NameGeneratorPage extends React.Component {
     render() {
-        console.log('UWAGA', this.props.generatedName);
         const {generatedName, onClickGetName} = this.props;
 
-        return <Container fluid>
+        return <Container fluid id='generator-page'>
             <Row className='bg-dark pb-3 pt-4'>
                 <Col md='12' className=''>
                     <Col md='6' sm='12' className='offset-md-3 text-center'>
