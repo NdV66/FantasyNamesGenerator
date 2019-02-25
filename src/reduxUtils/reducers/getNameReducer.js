@@ -7,7 +7,7 @@ export const getNameReducer = (state = initialState, action) => {
         case ON_CLICK_GET_NAME:
             return {
                 ...state,
-                generatedName: 'Tosia',
+                generatedName: 'Keep calm, this site is in progress <3',
             };
         case ON_CHANGE_NAME_INPUT:
             return {
