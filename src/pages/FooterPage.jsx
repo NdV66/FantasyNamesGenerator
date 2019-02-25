@@ -60,6 +60,7 @@ const otherProjectBodyHrefCssClasses = 'd-block';
 const otherProjectBody = <div className={URL_CONTAINER_CSS_CLASSES}>
     <a target='_blank' rel='noopener noreferrer' href={LANG.OTHER_PROJECT_URL_1} className={otherProjectBodyHrefCssClasses}>{LANG.OTHER_PROJECT_LINK_1}</a>
     <a target='_blank' rel='noopener noreferrer' href={LANG.OTHER_PROJECT_URL_2} className={otherProjectBodyHrefCssClasses}>{LANG.OTHER_PROJECT_LINK_2}</a>
+    <a target='_blank' rel='noopener noreferrer' href={LANG.OTHER_PROJECT_URL_3} className={otherProjectBodyHrefCssClasses}>{LANG.OTHER_PROJECT_LINK_3}</a>
 </div>;
 
 export const FooterPage = () => <Container fluid>

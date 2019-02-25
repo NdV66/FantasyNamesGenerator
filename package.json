@@ -8,7 +8,9 @@
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.0",
-    "gh-pages": "^2.0.1",
+    "express": "^4.16.4",
+    "helmet": "^3.15.1",
+    "morgan": "^1.9.1",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.1",
     "react": "^16.8.1",
@@ -17,11 +19,11 @@
     "reactstrap": "^7.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d dist"
+    "heroku-postbuild": "webpack -p"
   },
   "eslintConfig": {
     "extends": "react-app"
