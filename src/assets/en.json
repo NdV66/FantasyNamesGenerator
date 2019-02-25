@@ -1,6 +1,7 @@
 {
     "GET_NAME": "Get name!",
     "NAME_LABEL": "Your character name is...",
+    "NAME_INPUT_PLACEHOLDER": "name will be here",
     "ABOUT": "About",
     "ABOUT_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis orci sit amet nulla volutpat consequat. Suspendisse blandit purus quam.",
     "ABOUT_LINK": "See my site",

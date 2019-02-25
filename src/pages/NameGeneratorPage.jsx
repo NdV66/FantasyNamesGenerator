@@ -1,18 +1,10 @@
 import React from 'react';
 import {Col, Input, Row, Button, Container} from 'reactstrap';
 import {PropTypes} from 'prop-types';
-import Actions from '../actionNames.json';
 import { connect } from 'react-redux';
+import {mapDispatchToProps} from '../reduxUtils/mapDispatchToProps';
+import {mapStateToProps} from '../reduxUtils/mapStateToProps';
 import LANG from '../assets/en.json';
-
-const mapStateToProps = ({getNameReducer}) => ({
-    generatedName: getNameReducer.generatedName,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    onClickGetName: () => dispatch({ type: Actions.ON_CLICK_GET_NAME }),
-    handleChange: (event) => dispatch({ type: Actions.ON_CHANGE_NAME_INPUT, event}),
-});
 
 class NameGeneratorPage extends React.Component {
     render() {
@@ -27,7 +19,7 @@ class NameGeneratorPage extends React.Component {
                             type='text'
                             name='name'
                             id='name'
-                            placeholder='name will be here'
+                            placeholder={LANG.NAME_INPUT_PLACEHOLDER}
                             className='mb-3 mt-3'
                             value={generatedName}
                             onChange={handleChange}

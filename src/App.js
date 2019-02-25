@@ -1,5 +1,5 @@
 import React from 'react';
-import {PageJumbotron} from './components/Jumbotron';
+import {PageJumbotron} from './pages/Jumbotron';
 import NameGeneratorPage from './pages/NameGeneratorPage';
 import {FooterPage} from './pages/FooterPage';
 
