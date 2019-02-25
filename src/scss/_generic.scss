@@ -1,6 +1,3 @@
-@import "fonts";
-@import "variables";
-
 .script-font {
     font-family: LeagueScript;
     font-weight: 200;
@@ -26,4 +23,42 @@ h2 {
 h3 {
     font-weight: 100;
     font-size: $BASE_FONT_SIZE * 1.6;
+}
+
+// MOBILE
+@media screen and (max-width: 768px) {
+    h1 {
+        font-weight: 200;
+        font-size: $BASE_FONT_SIZE * 2.62;
+    }
+
+    h2 {
+        font-size: $BASE_FONT_SIZE * 1.8;
+    }
+
+    h3 {
+        font-weight: 100;
+        font-size: $BASE_FONT_SIZE * 1.2;
+    }
+}
+
+.btn-primary {
+    color: $TEXT_LIGHT;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+
+    &, &:visited, &:focus {
+        background-color: $CREAMY_PEACH !important;
+    }
+
+    &:hover, &:active {
+        background-color: $SAWTOOTH_AAK !important;
+    }
+}
+
+.form-control:focus {
+    border-color: $CREAMY_PEACH;
+    border-width: 1.8px;
+    box-shadow: none;
 }

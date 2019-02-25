@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
-import { mainReducer }from './reducers/mainReducer';
+import { mainReducer }from './reduxUtils/reducers/mainReducer';
 import App from './App';
 
 import { library } from '@fortawesome/fontawesome-svg-core'

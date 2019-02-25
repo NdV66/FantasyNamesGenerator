@@ -12,14 +12,15 @@ FontAwesomeIconWrapper.propTypes = {
     icon: PropTypes.string.isRequired,
 };
 
-const FooterElementContainer = (props) => <Col>
-    <Col sm='12' className='text-center'>
+
+const FooterElementContainer = (props) => <Col md='12' lg='4'>
+    <Col className='text-center'>
         <FontAwesomeIconWrapper icon={props.icon} />
     </Col>
-    <Col sm='12'>
+    <Col>
         <h5>{props.header}</h5>
     </Col>
-    <Col sm='12'>
+    <Col>
         {props.body}
     </Col>
 </Col>;

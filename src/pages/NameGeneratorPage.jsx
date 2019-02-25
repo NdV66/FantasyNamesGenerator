@@ -11,9 +11,9 @@ class NameGeneratorPage extends React.Component {
         const {generatedName, onClickGetName, handleChange} = this.props;
 
         return <Container fluid id='generator-page'>
-            <Row className='bg-dark pb-3 pt-4'>
-                <Col md='12' className=''>
-                    <Col md='6' sm='12' className='offset-md-3 text-center'>
+            <Row className='bg-dark pb-5 pt-5'>
+                <Col className=''>
+                    <Col md='12' lg={{size: 10, offset: 1}} className='text-center'>
                         <h3>{LANG.NAME_LABEL}</h3>
                         <Input
                             type='text'
@@ -24,7 +24,7 @@ class NameGeneratorPage extends React.Component {
                             value={generatedName}
                             onChange={handleChange}
                         />
-                        <Button onClick={onClickGetName}>{LANG.GET_NAME}</Button>
+                        <Button color='primary' onClick={onClickGetName}>{LANG.GET_NAME}</Button>
                     </Col>
                 </Col>
             </Row>
