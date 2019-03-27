@@ -1,3 +1,7 @@
-export const mapStateToProps = ({getNameReducer}) => ({
-    generatedName: getNameReducer.generatedName,
-});
+export const mapStateToProps = ({getNameReducer}) => {
+    return {
+        generatedName: getNameReducer.generatedName,
+        isError: getNameReducer.isError,
+        isLoading: getNameReducer.isLoading,
+    }
+};

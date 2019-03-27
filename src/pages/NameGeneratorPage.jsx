@@ -5,10 +5,13 @@ import { connect } from 'react-redux';
 import {mapDispatchToProps} from '../reduxUtils/mapDispatchToProps';
 import {mapStateToProps} from '../reduxUtils/mapStateToProps';
 import LANG from '../assets/en.json';
+import { LightLoading } from '../components/Loading';
 
 class NameGeneratorPage extends React.Component {
     render() {
-        const {generatedName, onClickGetName, handleChange} = this.props;
+        const {generatedName, onClickGetName, handleChange, isLoading} = this.props;
+        const Loading = LightLoading();
+        const buttonBody = !isLoading ? <Loading /> : LANG.GET_NAME;
 
         return <Container fluid id='generator-page'>
             <Row className='bg-dark pb-5 pt-5'>
@@ -24,7 +27,7 @@ class NameGeneratorPage extends React.Component {
                             value={generatedName}
                             onChange={handleChange}
                         />
-                        <Button color='primary' onClick={onClickGetName}>{LANG.GET_NAME}</Button>
+                        <Button color='primary' onClick={onClickGetName}>{buttonBody}</Button>
                     </Col>
                 </Col>
             </Row>

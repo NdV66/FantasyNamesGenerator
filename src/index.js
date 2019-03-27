@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware  } from 'redux';
 import { mainReducer }from './reduxUtils/reducers/mainReducer';
+import thunk from 'redux-thunk';
 import App from './App';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -12,7 +13,7 @@ import { faGrinBeam, faCodeBranch, faCampground} from '@fortawesome/free-solid-s
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/style.scss';
 
-const store = createStore(mainReducer);
+const store = createStore(mainReducer, applyMiddleware(thunk));
 
 library.add(faGrinBeam, faCodeBranch, faCampground);
 
